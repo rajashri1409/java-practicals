@@ -1,7 +1,7 @@
 public class pract4 {
 // getbyte
 
-         int getByte(int num)
+        public static int getByte(int num)
         {
              int  ans;
              int temp;
@@ -35,7 +35,7 @@ public class pract4 {
                          }
          //getShort
          
-           int getShort(int num)
+          public static int getShort(int num)
 {
    int  ans;
    int temp;
@@ -68,7 +68,7 @@ public class pract4 {
   
   //getnumber
   
-int getNumber(int num ,String s)
+public static int getNumber(int num ,String s)
 {
 int ans ;
 if( s.equalsIgnoreCase("Byte")
@@ -78,6 +78,8 @@ return getByte(int num);
 else if(s.equalsIgnoreCase("Short")
 {
 return getShort(int num);
+}
+         return -1;
 }
   // decimal to binary
     public static int decimalToBinary(int num) {
@@ -166,11 +168,11 @@ return getShort(int num);
             int hexValue = 0;
 
             if (hexChar >= '0' && hexChar <= '9') {
-                hexValue = hexChar - '0';  // Convert '0'-'9' to 0-9
+                hexValue = hexChar - '0';  
             } else if (hexChar >= 'A' && hexChar <= 'F') {
-                hexValue = hexChar - 'A' + 10;  // Convert 'A'-'F' to 10-15
+                hexValue = hexChar - 'A' + 10; 
             } else if (hexChar >= 'a' && hexChar <= 'f') {
-                hexValue = hexChar - 'a' + 10;  // Convert 'a'-'f' to 10-15
+                hexValue = hexChar - 'a' + 10;  
             }
 
             decimal = decimal * 16 + hexValue;
