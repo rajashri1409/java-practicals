@@ -1,29 +1,22 @@
 public class str1 {
-String getStringH(int size,int row){
-  String Pattern="";
-  String blankString=" ";
-       
-            for(int col=1;col<2*size;col++){
-                if(col==1||row==size||col==2*size-1){
+    String getStringH(int size,int row){
+      String Pattern="";
+      String blankString=" ";
+       for(int col=1;col<2*size;col++){
+             if(col==1||row==size||col==2*size-1){
                     Pattern+="*";
                }
                else{
-                    Pattern+=blankString;
+                      Pattern+=blankString;
            }
            }
-           
-       
-       return Pattern;
+           return Pattern;
     } 
     //pattern for R
     String getStringR(int size,int row){
           String Pattern="";
-  String blankString=" ";
-    
-          
-          
-              if(row==1){
-              
+          String blankString=" ";
+            if(row==1){
               for(int p=1;p<2*size;p++){  
                   if(p==1||p==2*size-1){
                       Pattern+=blankString;
@@ -31,46 +24,43 @@ String getStringH(int size,int row){
                       else{
                       Pattern+="*";
                      }
-                  }
-                  }
-                
-                else if( row>1&&row<size){
-                for(int p=1;p<2*size;p++){
-                   if(p==1||p==2*size-1){
-                     Pattern+="*";
+                }
+            }
+             else if( row>1&&row<size){
+                 for(int p=1;p<2*size;p++){
+                    if(p==1||p==2*size-1){
+                       Pattern+="*";
                     } 
-                    else{
+                     else{
+                       Pattern+=blankString;
+                 }
+              }
+            }
+               else if(row==size){
+                 for(int p=1;p<2*size;p++){
+                    if(p<2*size-1){
+                      Pattern+="*";
+                  }
+                   else{
+                      Pattern+=blankString;
+                 }
+              }
+           }
+              else if(row>size){
+                for(int p=1;p<2*size;p++){
+                  if(p==1||p==row-1){
+                      Pattern+="*";
+                 }
+                  else{
                       Pattern+=blankString;
                   }
-                  }
-                  }
-                else if(row==size){
-                for(int p=1;p<2*size;p++){
-                   if(p<2*size-1){
-                   Pattern+="*";
-                  }
-                  else{
-                    Pattern+=blankString;
-                 }
-                 }
-                 }
-               else if(row>size){
-               for(int p=1;p<2*size;p++){
-              
-                 if(p==1||p==row-1){
-                    Pattern+="*";
-                 }
-                else{
-                    Pattern+=blankString;
-                  }
-                  }
-                }
-           
-           return Pattern;
+              }
+         }
+                return Pattern;
      }
      
      String getStringS(int size,int row){
-     String Pattern="";
+      String Pattern="";
       String blankString=" ";
     
         if(row==1||row==size||row==2*size-1){
@@ -96,12 +86,9 @@ String getStringH(int size,int row){
          Pattern+=blankString;
      }
         Pattern+="*";
- 
- }
- }
-   
-   
-   return Pattern;
+    }
+}
+    return Pattern;
    }
    
    // pattern for I
@@ -110,15 +97,15 @@ String getStringH(int size,int row){
       String Pattern="";
       String blankString=" ";
      for(int col=1;col<2*size;col++){
-       if(row==1||col==size||row==2*size-1){
-           Pattern+="*";
+        if(row==1||col==size||row==2*size-1){
+             Pattern+="*";
            }
            else{
              Pattern+=blankString;
            }
          }
              return Pattern;
-          }
+     }
      // pattern for J
      String  getStringJ(int size,int row){
       String Pattern="";
@@ -137,8 +124,8 @@ String getStringH(int size,int row){
                    else{
                       Pattern+="*";
                   }
-                  }
-                  }
+               }
+          }
                   else if(row>size&&row<2*size-1){
                   for(int p=2*size-1;p>0;p--){
                     if(p==size||p==2*size-1){
@@ -147,13 +134,12 @@ String getStringH(int size,int row){
                      else{
                         Pattern+=blankString;
                       }
-                      }
+                  }
           }
-                      else if(row==2*size-1){
-                      
+              else if(row==2*size-1){
                       for(int p=2*size-1;p>0;p--){
-                      if(p==2*size-1||p<=size){
-                         Pattern+=blankString;
+                        if(p==2*size-1||p<=size){
+                           Pattern+=blankString;
                       }
                       else {
                           Pattern+="*";
@@ -181,7 +167,7 @@ String getStringH(int size,int row){
                        
                   }
                      return Pattern;
-          }
+        }
       
   public static void main(String args[]){
       int size=5;
