@@ -171,6 +171,7 @@ public class str1 {
       
   public static void main(String args[]){
       int size=5;
+      size+=1;
     str1 i1=new str1();
     for(int row=1;row<2*size;row++){
     
