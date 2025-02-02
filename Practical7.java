@@ -1,5 +1,6 @@
      public class str1 {
             void H(int size){
+            size+=1;
                  for(int row=1;row<2*size;row++){
                     for(int col=1;col<2*size;col++){
                         if(col==1||row==size||col==2*size-1){
@@ -14,6 +15,7 @@
             } 
             //pattern for R
                      void R(int size){
+                     size+=1;
                       for(int row=1;row<2*size;row++){
                           if(row==1){
                              for(int p=1;p<2*size;p++){  
@@ -48,7 +50,7 @@
                               }
                                else if(row>size){
                                    for(int p=1;p<2*size;p++){
-                                       if(p==1||p==row-1){
+                                       if(p==1||p==row-size){
                                            System.out.print("*");
                                         }
                                          else{
@@ -62,6 +64,7 @@
                     }
      // pattern for S
             void S(int size){
+            size+=1;
                 for(int row=1;row<2*size;row++){
                   if(row==1||row==size||row==2*size-1){
                       for(int p=1;p<2*size;p++){
@@ -93,6 +96,7 @@
    
    // pattern for I
           void I(int size){
+          size+=1;
                   for(int row=1;row<2*size;row++){
                        for(int col=1;col<2*size;col++){
                           if(row==1||col==size||row==2*size-1){
@@ -107,6 +111,7 @@
                      }
      // pattern for J
      void J(int size){
+     size+=1;
         for(int row=1;row<2*size;row++){
               if(row==1){
                   for(int p=2*size-1;p>0;p--){
@@ -149,6 +154,7 @@
         }  
         //pattern for A
         void A(int size){
+            size+=1;
             for(int row=1;row<2*size;row++){
                for(int col=1;col<2*size;col++){
                   if( ((col==1||col==2*size-1)&&row>1)||((row==1)&&col>1)||row==size){
@@ -169,21 +175,21 @@
       public static void main(String args[]){
     
               str1 i1=new str1();
-              i1.R(3);
+              i1.R(4);
               System.out.println();
-               i1.A(3);
+               i1.A(4);
              System.out.println();
-              i1.J(3);
+              i1.J(4);
             System.out.println();
-              i1.A(3);
+              i1.A(4);
             System.out.println();
-             i1.S(3);
+             i1.S(4);
           System.out.println();
-              i1.H(3);
+              i1.H(4);
           System.out.println();
-            i1.R(3);
+            i1.R(4);
           System.out.println();
-            i1.I(3);
+            i1.I(4);
    
       }
 }
