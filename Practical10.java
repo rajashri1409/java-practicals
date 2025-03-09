@@ -47,6 +47,6 @@
             }           
                  public static void main(String []args){
                       Practical10 grid = new Practical10();
-                          grid.displaygrid(3);
+                          grid.displaygrid(10);
              }
        }                                 
